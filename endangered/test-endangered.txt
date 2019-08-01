@@ -1,0 +1,16 @@
+Extra Tests for Endangered program
+
+These tests are extra tests we can use to check 
+that a student has fully implemented the program.
+
+If they have hardcoded any tests these will prevent that.
+
+Run with:
+python -m doctest -v test-endangered.txt
+
+
+    >>> from endangered import categorise
+    >>> categorise(9)
+    'Critically Endangered'
+    >>> categorise(75)
+    'Endangered'
