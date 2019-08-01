@@ -2,12 +2,12 @@ import csv
 from collections import defaultdict
 
 def load_model():
-  scores = defaultdict([])
+  scores = defaultdict(list)
   with open('model/scores.csv') as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
       concept = row[0]
-      score_list = row[1:]
+      score_list = [int(score) for score in row[1:]]
       scores[concept] = score_list
   return scores
 
